@@ -1,0 +1,50 @@
+# -------------------------------------------------------------------
+# Professional .gitignore for Node.js / JavaScript Applications
+# -------------------------------------------------------------------
+
+# Dependencies and Build Artifacts
+##################################
+/node_modules
+/dist
+/build
+/out
+/coverage
+/temp
+
+# Lock files and Installers
+############################
+npm-debug.log
+npm-debug.log.*
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+package-lock.json
+yarn.lock
+# For individual directories like 'server' or 'workshop' if they have separate dependencies
+/server/node_modules
+/workshop/node_modules
+
+# Editor and OS Generated Files
+################################
+.DS_Store             # macOS
+Thumbs.db             # Windows
+.vscode/              # Visual Studio Code settings
+*.sublime-workspace   # Sublime Text
+
+# Logs and Data
+################
+*.log
+*.sqlite
+/data/*.db
+
+# Environment Variables and Sensitive Files
+##########################################
+.env
+.env.*
+# If you store sensitive configuration:
+/config/local.json
+
+# Test and Mocking Artifacts
+############################
+*.snap
+__snapshots__/
