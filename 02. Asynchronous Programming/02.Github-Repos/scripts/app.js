@@ -13,8 +13,6 @@ function loadRepos() {
 	fetch(url) 
 		.then((response) => response.json())
 		.then((data) => {
-			list.innerHTML = (data.map(repo => `<li><a></`))
-			console.log(data[0].html_url);
-			console.log(data[0].full_name)
+			list.innerHTML = data.map(repo => `<li><a href="${repo.html_url}">${repo.full_name}</a></li>`).join('\n');
 		});
 }
