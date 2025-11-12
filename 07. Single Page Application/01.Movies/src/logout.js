@@ -1,4 +1,9 @@
+import { showLoginView } from "./loginView.js";
+import { userService } from "./userService.js";
+import { userUtils } from "./userUtils.js";
 
-export function logout() {
-
+export async function logout() {
+    await userService.logout();
+    userUtils.clearUserData();
+    showLoginView();
 }

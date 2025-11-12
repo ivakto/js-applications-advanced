@@ -43,4 +43,4 @@ function onNavigate(event) {
 
     routes[path]();
     // Връща функция, която можем да извикаме 
-}
+}  
