@@ -11,6 +11,17 @@
 /coverage
 /temp
 
+# ГЕНЕРИРАНИ ФАЙЛОВЕ (СИГУРНА КОМПИЛАЦИЯ)
+##################################
+# Игнорира всички генерирани JS и дефиниционни файлове в подпапките,
+# които се получават от компилацията на TypeScript (.ts)
+**/*.js
+**/*.js.map
+**/*.d.ts
+
+# Игнориране на node_modules във всички поддиректории на проекта
+**/node_modules/
+
 # Lock files and Installers
 ############################
 npm-debug.log
@@ -26,10 +37,10 @@ yarn.lock
 
 # Editor and OS Generated Files
 ################################
-.DS_Store             # macOS
-Thumbs.db             # Windows
-.vscode/              # Visual Studio Code settings
-*.sublime-workspace   # Sublime Text
+.DS_Store             # macOS
+Thumbs.db             # Windows
+.vscode/              # Visual Studio Code settings
+*.sublime-workspace   # Sublime Text
 
 # Logs and Data
 ################
@@ -48,3 +59,15 @@ Thumbs.db             # Windows
 ############################
 *.snap
 __snapshots__/
+
+# Gerenated Command/Executable Scripts (Windows)
+###############################################
+# Игнориране на генерирани изпълними файлове от инструменти
+*.cmd
+*.ps1
+# Playwright and other tool artifacts (often created in node_modules/.bin/)
+/playwright*
+/http-server*
+/mime*
+/he*
+/opener*
